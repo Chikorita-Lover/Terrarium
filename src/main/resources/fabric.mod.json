@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "terrarium",
+	"version": "${version}",
+	"name": "Terrarium",
+	"description": "Adds many features and content from Terraria by Re-Logic to the base game.",
+	"authors": [
+		"Chikorita Lover"
+	],
+	"contact": {
+		"homepage": "https://github.com/Chikorita-Lover/Terrarium",
+		"sources": "https://github.com/Chikorita-Lover/Terrarium",
+		"issues": "https://github.com/Chikorita-Lover/Terrarium/issues"
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/terrarium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.chikoritalover.terrarium.Terrarium"
+		],
+		"fabric-datagen": [
+			"com.chikoritalover.terrarium.TerrariumDataGenerator"
+		]
+	},
+	"mixins": [
+		"terrarium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.17",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
