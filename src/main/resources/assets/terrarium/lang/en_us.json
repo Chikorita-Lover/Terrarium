@@ -1,0 +1,10 @@
+{
+  "entity.terrarium.boomerang": "Boomerang",
+
+  "item.modifiers.thrown": "When Thrown:",
+
+  "item.terrarium.boomerang": "Boomerang",
+
+  "subtitles.entity.boomerang.hit": "Boomerang hits",
+  "subtitles.entity.boomerang.throw": "Boomerang flies"
+}

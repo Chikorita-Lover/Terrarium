@@ -1,0 +1,15 @@
+{
+  "entity.boomerang.hit": {
+    "subtitle": "subtitles.entity.boomerang.hit",
+    "sounds": [
+      "terrarium:entity/boomerang/hit1",
+      "terrarium:entity/boomerang/hit2"
+    ]
+  },
+  "entity.boomerang.throw": {
+    "subtitle": "subtitles.entity.boomerang.throw",
+    "sounds": [
+      "terrarium:entity/boomerang/swish"
+    ]
+  }
+}

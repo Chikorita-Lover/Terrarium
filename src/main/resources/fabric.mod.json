@@ -21,6 +21,9 @@
 		],
 		"fabric-datagen": [
 			"com.chikoritalover.terrarium.TerrariumDataGenerator"
+		],
+		"client": [
+			"com.chikoritalover.terrarium.TerrariumClient"
 		]
 	},
 	"mixins": [
