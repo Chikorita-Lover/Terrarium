@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "terrarium:block/ebonwood_planks",
+    "side": "terrarium:block/ebonwood_planks",
+    "top": "terrarium:block/ebonwood_planks"
+  }
+}

@@ -1,9 +1,15 @@
 {
-	"required": true,
-	"package": "com.chikoritalover.terrarium.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.chikoritalover.terrarium.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AxeItemMixin",
+    "BlockEntityTypeMixin",
+    "BoatEntityMixin",
+    "BoatEntityTypeMixin",
+    "ChestBoatEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

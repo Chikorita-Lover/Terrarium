@@ -1,5 +1,6 @@
 package com.chikoritalover.terrarium;
 
+import com.chikoritalover.terrarium.registry.TerrariumBlocks;
 import com.chikoritalover.terrarium.registry.TerrariumEntityType;
 import com.chikoritalover.terrarium.registry.TerrariumItems;
 import com.chikoritalover.terrarium.registry.TerrariumSoundEvents;
@@ -13,6 +14,7 @@ public class Terrarium implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		TerrariumBlocks.register();
 		TerrariumEntityType.register();
 		TerrariumItems.register();
 		TerrariumSoundEvents.register();

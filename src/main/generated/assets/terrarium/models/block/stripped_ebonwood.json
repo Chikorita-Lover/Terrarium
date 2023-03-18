@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "terrarium:block/stripped_ebonwood_log",
+    "side": "terrarium:block/stripped_ebonwood_log"
+  }
+}

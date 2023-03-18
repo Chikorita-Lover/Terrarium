@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "terrarium:block/ebonwood_slab"
+    },
+    "type=double": {
+      "model": "terrarium:block/ebonwood_planks"
+    },
+    "type=top": {
+      "model": "terrarium:block/ebonwood_slab_top"
+    }
+  }
+}

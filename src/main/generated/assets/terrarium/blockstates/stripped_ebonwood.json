@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "terrarium:block/stripped_ebonwood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "terrarium:block/stripped_ebonwood"
+    },
+    "axis=z": {
+      "model": "terrarium:block/stripped_ebonwood",
+      "x": 90
+    }
+  }
+}

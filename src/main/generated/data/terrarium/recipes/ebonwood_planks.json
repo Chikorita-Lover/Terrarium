@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "terrarium:ebonwood_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "terrarium:ebonwood_planks"
+  }
+}

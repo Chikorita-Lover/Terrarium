@@ -1,9 +1,27 @@
 {
+  "block.terrarium.ebonwood": "Ebonwood",
+  "block.terrarium.ebonwood_button": "Ebonwood Button",
+  "block.terrarium.ebonwood_door": "Ebonwood Door",
+  "block.terrarium.ebonwood_fence": "Ebonwood Fence",
+  "block.terrarium.ebonwood_fence_gate": "Ebonwood Fence Gate",
+  "block.terrarium.ebonwood_log": "Ebonwood Log",
+  "block.terrarium.ebonwood_planks": "Ebonwood Planks",
+  "block.terrarium.ebonwood_pressure_plate": "Ebonwood Pressure Plate",
+  "block.terrarium.ebonwood_sign": "Ebonwood Sign",
+  "block.terrarium.ebonwood_slab": "Ebonwood Slab",
+  "block.terrarium.ebonwood_stairs": "Ebonwood Stairs",
+  "block.terrarium.ebonwood_trapdoor": "Ebonwood Trapdoor",
+  "block.terrarium.ebonwood_wall_sign": "Ebonwood Wall Sign",
+  "block.terrarium.stripped_ebonwood": "Stripped Ebonwood",
+  "block.terrarium.stripped_ebonwood_log": "Stripped Ebonwood Log",
+
   "entity.terrarium.boomerang": "Boomerang",
 
   "item.modifiers.thrown": "When Thrown:",
 
   "item.terrarium.boomerang": "Boomerang",
+  "item.terrarium.ebonwood_boat": "Ebonwood Boat",
+  "item.terrarium.ebonwood_chest_boat": "Ebonwood Boat with Chest",
 
   "subtitles.entity.boomerang.hit": "Boomerang hits",
   "subtitles.entity.boomerang.throw": "Boomerang flies"

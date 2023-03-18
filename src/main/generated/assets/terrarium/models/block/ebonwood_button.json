@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "terrarium:block/ebonwood_planks"
+  }
+}

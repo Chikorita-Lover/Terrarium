@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "terrarium:block/ebonwood_door_bottom",
+    "top": "terrarium:block/ebonwood_door_top"
+  }
+}
