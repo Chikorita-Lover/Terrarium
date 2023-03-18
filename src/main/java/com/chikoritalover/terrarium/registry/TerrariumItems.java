@@ -3,6 +3,7 @@ package com.chikoritalover.terrarium.registry;
 import com.chikoritalover.terrarium.Terrarium;
 import com.chikoritalover.terrarium.item.BoomerangItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -52,5 +53,11 @@ public class TerrariumItems {
         Registry.register(Registry.ITEM, new Identifier(Terrarium.MODID, "ebonwood_chest_boat"), EBONWOOD_CHEST_BOAT);
 
         Registry.register(Registry.ITEM, new Identifier(Terrarium.MODID, "boomerang"), BOOMERANG);
+    }
+
+    public static void registerFuels() {
+        FuelRegistry.INSTANCE.add(EBONWOOD_FENCE, 300);
+
+        FuelRegistry.INSTANCE.add(EBONWOOD_FENCE_GATE, 300);
     }
 }

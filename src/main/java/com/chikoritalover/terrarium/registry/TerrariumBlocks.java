@@ -2,6 +2,8 @@ package com.chikoritalover.terrarium.registry;
 
 import com.chikoritalover.terrarium.Terrarium;
 import com.google.common.collect.ImmutableMap;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -29,8 +31,6 @@ public class TerrariumBlocks {
     public static final Block EBONWOOD_TRAPDOOR = new TrapdoorBlock(AbstractBlock.Settings.of(Material.WOOD, EBONWOOD_PLANKS.getDefaultMapColor()).nonOpaque().sounds(BlockSoundGroup.WOOD).strength(3.0F));
     public static final Block EBONWOOD_FENCE_GATE = new FenceGateBlock(AbstractBlock.Settings.copy(EBONWOOD_PLANKS));
 
-    public static final Map<Block, Block> STRIPPED_BLOCKS = new ImmutableMap.Builder<Block, Block>().put(EBONWOOD, STRIPPED_EBONWOOD).put(EBONWOOD_LOG, STRIPPED_EBONWOOD_LOG).build();
-
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier(Terrarium.MODID, "ebonwood_planks"), EBONWOOD_PLANKS);
         Registry.register(Registry.BLOCK, new Identifier(Terrarium.MODID, "ebonwood_slab"), EBONWOOD_SLAB);
@@ -49,5 +49,24 @@ public class TerrariumBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Terrarium.MODID, "ebonwood_door"), EBONWOOD_DOOR);
         Registry.register(Registry.BLOCK, new Identifier(Terrarium.MODID, "ebonwood_trapdoor"), EBONWOOD_TRAPDOOR);
         Registry.register(Registry.BLOCK, new Identifier(Terrarium.MODID, "ebonwood_fence_gate"), EBONWOOD_FENCE_GATE);
+    }
+
+    public static void registerFlammableBlocks() {
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD_PLANKS, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD_SLAB, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD_STAIRS, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD_LOG, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(STRIPPED_EBONWOOD_LOG, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(STRIPPED_EBONWOOD, 5, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD_FENCE, 5, 20);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBONWOOD_FENCE_GATE, 5, 20);
+    }
+
+    public static void registerStrippableBlockPairs() {
+        StrippableBlockRegistry.register(EBONWOOD, STRIPPED_EBONWOOD);
+        StrippableBlockRegistry.register(EBONWOOD_LOG, STRIPPED_EBONWOOD_LOG);
     }
 }

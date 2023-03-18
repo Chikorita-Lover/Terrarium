@@ -15,8 +15,11 @@ public class Terrarium implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		TerrariumBlocks.register();
+		TerrariumBlocks.registerFlammableBlocks();
+		TerrariumBlocks.registerStrippableBlockPairs();
 		TerrariumEntityType.register();
 		TerrariumItems.register();
+		TerrariumItems.registerFuels();
 		TerrariumSoundEvents.register();
 	}
 }
