@@ -1,6 +1,5 @@
 package com.chikoritalover.terrarium.client.render;
 
-import com.chikoritalover.terrarium.Terrarium;
 import com.chikoritalover.terrarium.entity.BoomerangEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -19,7 +18,6 @@ import net.minecraft.util.math.Vec3f;
 
 @Environment(value = EnvType.CLIENT)
 public class BoomerangEntityRenderer<T extends Entity> extends EntityRenderer<T> {
-    public static final Identifier TEXTURE = new Identifier(Terrarium.MODID, "textures/item/boomerang.png");
     private final ItemRenderer itemRenderer;
 
     public BoomerangEntityRenderer(EntityRendererFactory.Context context) {
@@ -32,9 +30,12 @@ public class BoomerangEntityRenderer<T extends Entity> extends EntityRenderer<T>
 
         matrices.push();
         matrices.translate(0.0, 0.1, 0.0);
-        matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw()) + 95.0F));
-        float f = ((BoomerangEntity) entity).getRotation(tickDelta);
-        matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(f));
+        float f = entity.prevYaw * MathHelper.RADIANS_PER_DEGREE;
+        float g = entity.getYaw() * MathHelper.RADIANS_PER_DEGREE;
+        double d = MathHelper.lerp(tickDelta, Math.sin(f), Math.sin(g));
+        double e = MathHelper.lerp(tickDelta, Math.cos(f), Math.cos(g));
+        matrices.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion((float) (Math.atan2(d, e) + MathHelper.HALF_PI + Math.PI / 36.0)));
+        matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(((BoomerangEntity) entity).getRotation(tickDelta)));
 
         this.itemRenderer.renderItem(((BoomerangEntity) entity).asItemStack(), ModelTransformation.Mode.FIXED, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getId());
         matrices.pop();
