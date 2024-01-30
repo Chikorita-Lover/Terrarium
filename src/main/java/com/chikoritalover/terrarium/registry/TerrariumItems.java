@@ -15,9 +15,6 @@ import net.minecraft.util.Identifier;
 public class TerrariumItems {
     public static final Item EBONWOOD_SIGN = register("ebonwood_sign", new SignItem(new Item.Settings().maxCount(16), TerrariumBlocks.EBONWOOD_SIGN, TerrariumBlocks.EBONWOOD_WALL_SIGN));
 
-    public static final Item EBONWOOD_BOAT = register("ebonwood_boat", new BoatItem(false, ClassTinkerers.getEnum(BoatEntity.Type.class, "EBONWOOD"), new Item.Settings().maxCount(1)));
-    public static final Item EBONWOOD_CHEST_BOAT = register("ebonwood_chest_boat", new BoatItem(true, ClassTinkerers.getEnum(BoatEntity.Type.class, "EBONWOOD"), new Item.Settings().maxCount(1)));
-
     public static Item register(Block block) {
         return register(new BlockItem(block, new Item.Settings()));
     }
@@ -58,9 +55,6 @@ public class TerrariumItems {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.addBefore(Items.CRIMSON_SIGN, TerrariumItems.EBONWOOD_SIGN);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.addAfter(Items.BAMBOO_CHEST_RAFT, TerrariumItems.EBONWOOD_BOAT, TerrariumItems.EBONWOOD_CHEST_BOAT);
         });
     }
 }

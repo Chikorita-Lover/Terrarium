@@ -3,7 +3,6 @@ package com.chikoritalover.terrarium;
 import com.chikoritalover.terrarium.registry.TerrariumBlockFamilies;
 import com.chikoritalover.terrarium.registry.TerrariumBlocks;
 import com.chikoritalover.terrarium.registry.TerrariumItemTags;
-import com.chikoritalover.terrarium.registry.TerrariumItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -12,7 +11,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.RecipeProvider;
@@ -70,8 +68,6 @@ public class TerrariumDataGenerator implements DataGeneratorEntrypoint {
 
         @Override
         public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-            itemModelGenerator.register(TerrariumItems.EBONWOOD_BOAT, Models.GENERATED);
-            itemModelGenerator.register(TerrariumItems.EBONWOOD_CHEST_BOAT, Models.GENERATED);
         }
     }
 
@@ -87,9 +83,6 @@ public class TerrariumDataGenerator implements DataGeneratorEntrypoint {
             RecipeProvider.offerPlanksRecipe(exporter, TerrariumBlocks.EBONWOOD_PLANKS, TerrariumItemTags.EBONWOOD_LOGS, 4);
             RecipeProvider.offerBarkBlockRecipe(exporter, TerrariumBlocks.EBONWOOD, TerrariumBlocks.EBONWOOD_LOG);
             RecipeProvider.offerBarkBlockRecipe(exporter, TerrariumBlocks.STRIPPED_EBONWOOD, TerrariumBlocks.STRIPPED_EBONWOOD_LOG);
-
-            RecipeProvider.offerBoatRecipe(exporter, TerrariumItems.EBONWOOD_BOAT, TerrariumBlocks.EBONWOOD_PLANKS);
-            RecipeProvider.offerChestBoatRecipe(exporter, TerrariumItems.EBONWOOD_CHEST_BOAT, TerrariumItems.EBONWOOD_BOAT);
         }
     }
 }
