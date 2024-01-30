@@ -30,5 +30,6 @@
     "recipes": [
       "terrarium:stripped_ebonwood"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

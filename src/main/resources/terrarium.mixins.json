@@ -5,7 +5,7 @@
   "mixins": [
     "BlockEntityTypeMixin",
     "BoatEntityMixin",
-    "BoatEntityTypeMixin",
+    "BoatEntityMixin$TypeMixin",
     "ChestBoatEntityMixin"
   ],
   "injectors": {

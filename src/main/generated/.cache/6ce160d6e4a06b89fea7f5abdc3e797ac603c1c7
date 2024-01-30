@@ -1,7 +1,6 @@
-// 1.19.2	2023-03-17T14:13:46.3300992	minecraft:block Loot Table
+// 1.20.1	2024-01-28T12:25:46.9065022	Terrarium/Block Loot Tables
 f73d66981cddd8d4b340b1932fde22fbdbe09653 data\terrarium\loot_tables\blocks\ebonwood_log.json
 7f40e865cd39f95ad24b57d6b53e68cf09cdf9ce data\terrarium\loot_tables\blocks\stripped_ebonwood.json
-ef25e0bb4837acce56da3527d2470d15c4fb4ae9 data\terrarium\loot_tables\blocks\ebonwood_wall_sign.json
 87f33f857a41faf4696a55db9b38a85038062b92 data\terrarium\loot_tables\blocks\ebonwood_fence.json
 7f433847d9a415f26c2f1090c87bf32a06bbf315 data\terrarium\loot_tables\blocks\ebonwood_stairs.json
 79ab88fea4f036dff3518123fde42526113af990 data\terrarium\loot_tables\blocks\ebonwood_planks.json
@@ -9,8 +8,8 @@ ef25e0bb4837acce56da3527d2470d15c4fb4ae9 data\terrarium\loot_tables\blocks\ebonw
 07971fd90c13e0b1f972a11a63c22c7ce554190f data\terrarium\loot_tables\blocks\ebonwood_button.json
 8d7bf29ff68db28f32cdb697d5e790c1f9de8b6f data\terrarium\loot_tables\blocks\ebonwood_door.json
 04f8bcc103a2bca111d776d83e51969ab0ecb4e7 data\terrarium\loot_tables\blocks\ebonwood_trapdoor.json
-cef01d4867981b2e9e36e2255cb3bc142a2c1449 data\terrarium\loot_tables\blocks\stripped_ebonwood_log.json
 7f46d0a7351ffd041baa8c9c484b610a67526442 data\terrarium\loot_tables\blocks\ebonwood_slab.json
+cef01d4867981b2e9e36e2255cb3bc142a2c1449 data\terrarium\loot_tables\blocks\stripped_ebonwood_log.json
 fadb3daa2ddbd1b0f1f98230dd6e9b48cad56e70 data\terrarium\loot_tables\blocks\ebonwood_pressure_plate.json
 f4caa8f1ec83f752908d33a2adfca2a01839bea9 data\terrarium\loot_tables\blocks\ebonwood_fence_gate.json
 ef25e0bb4837acce56da3527d2470d15c4fb4ae9 data\terrarium\loot_tables\blocks\ebonwood_sign.json

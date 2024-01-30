@@ -2,9 +2,8 @@ package com.chikoritalover.terrarium.registry;
 
 import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
-import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 
 import java.util.Map;
 import java.util.stream.Stream;
@@ -17,7 +16,7 @@ public class TerrariumBlockFamilies {
         BlockFamily.Builder builder = new BlockFamily.Builder(baseBlock);
         BlockFamily blockFamily = BASE_BLOCKS_TO_FAMILIES.put(baseBlock, builder.build());
         if (blockFamily != null) {
-            throw new IllegalStateException("Duplicate family definition for " + Registry.BLOCK.getId(baseBlock));
+            throw new IllegalStateException("Duplicate family definition for " + Registries.BLOCK.getId(baseBlock));
         }
         return builder;
     }

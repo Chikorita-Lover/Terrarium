@@ -30,5 +30,6 @@
     "recipes": [
       "terrarium:ebonwood_door"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
