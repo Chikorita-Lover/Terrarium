@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -29,15 +28,10 @@ public class TerrariumBlocks {
     public static final Block EBONWOOD_PRESSURE_PLATE = registerBlockWithItem("ebonwood_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.create().mapColor(EBONWOOD_PLANKS.getDefaultMapColor()).noCollision().sounds(BlockSoundGroup.WOOD).strength(0.5F), Terrarium.EBONWOOD_BLOCK_SET));
     public static final Block EBONWOOD_BUTTON = registerBlockWithItem("ebonwood_button", new ButtonBlock(FabricBlockSettings.create().noCollision().strength(0.5F), Terrarium.EBONWOOD_BLOCK_SET, 30, true));
 
-    public static final Block EBONWOOD_SIGN = register("ebonwood_sign", new SignBlock(FabricBlockSettings.create().noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD), Terrarium.EBONWOOD_WOOD_TYPE));
-    public static final Block EBONWOOD_WALL_SIGN = register("ebonwood_wall_sign", new WallSignBlock(FabricBlockSettings.create().noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD), Terrarium.EBONWOOD_WOOD_TYPE));
-
     private static Block registerBlockWithItem(String id, Block block) {
-        Block block2 = register(id, block);
-        BlockItem blockItem = new BlockItem(block2, new FabricItemSettings());
-        blockItem.appendBlocks(Item.BLOCK_ITEMS, blockItem);
-        Registry.register(Registries.ITEM, new Identifier(Terrarium.MODID, id), blockItem);
-        return block2;
+        register(id, block);
+        Registry.register(Registries.ITEM, new Identifier(Terrarium.MODID, id), new BlockItem(block, new FabricItemSettings()));
+        return block;
     }
 
     private static Block register(String id, Block block) {

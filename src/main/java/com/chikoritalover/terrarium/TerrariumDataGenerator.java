@@ -43,7 +43,6 @@ public class TerrariumDataGenerator implements DataGeneratorEntrypoint {
             this.addDrop(TerrariumBlocks.STRIPPED_EBONWOOD);
 
             this.addDrop(TerrariumBlocks.EBONWOOD_FENCE);
-            this.addDrop(TerrariumBlocks.EBONWOOD_SIGN);
 
             this.addDrop(TerrariumBlocks.EBONWOOD_BUTTON);
             this.addDrop(TerrariumBlocks.EBONWOOD_PRESSURE_PLATE);

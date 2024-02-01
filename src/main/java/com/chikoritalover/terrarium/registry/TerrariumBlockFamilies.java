@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class TerrariumBlockFamilies {
     private static final Map<Block, BlockFamily> BASE_BLOCKS_TO_FAMILIES = Maps.newHashMap();
-    public static final BlockFamily EBONWOOD = register(TerrariumBlocks.EBONWOOD_PLANKS).button(TerrariumBlocks.EBONWOOD_BUTTON).fence(TerrariumBlocks.EBONWOOD_FENCE).fenceGate(TerrariumBlocks.EBONWOOD_FENCE_GATE).pressurePlate(TerrariumBlocks.EBONWOOD_PRESSURE_PLATE).sign(TerrariumBlocks.EBONWOOD_SIGN, TerrariumBlocks.EBONWOOD_WALL_SIGN).slab(TerrariumBlocks.EBONWOOD_SLAB).stairs(TerrariumBlocks.EBONWOOD_STAIRS).door(TerrariumBlocks.EBONWOOD_DOOR).trapdoor(TerrariumBlocks.EBONWOOD_TRAPDOOR).group("wooden").unlockCriterionName("has_planks").build();
+    public static final BlockFamily EBONWOOD = register(TerrariumBlocks.EBONWOOD_PLANKS).button(TerrariumBlocks.EBONWOOD_BUTTON).fence(TerrariumBlocks.EBONWOOD_FENCE).fenceGate(TerrariumBlocks.EBONWOOD_FENCE_GATE).pressurePlate(TerrariumBlocks.EBONWOOD_PRESSURE_PLATE).slab(TerrariumBlocks.EBONWOOD_SLAB).stairs(TerrariumBlocks.EBONWOOD_STAIRS).door(TerrariumBlocks.EBONWOOD_DOOR).trapdoor(TerrariumBlocks.EBONWOOD_TRAPDOOR).group("wooden").unlockCriterionName("has_planks").build();
 
     public static BlockFamily.Builder register(Block baseBlock) {
         BlockFamily.Builder builder = new BlockFamily.Builder(baseBlock);
