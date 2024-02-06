@@ -9,11 +9,19 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.RecipeProvider;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Items;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.condition.TableBonusLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
 
 import java.util.function.Consumer;
@@ -49,6 +57,10 @@ public class TerrariumDataGenerator implements DataGeneratorEntrypoint {
             this.addDrop(TerrariumBlocks.EBONWOOD_DOOR, doorDrops(TerrariumBlocks.EBONWOOD_DOOR));
             this.addDrop(TerrariumBlocks.EBONWOOD_TRAPDOOR);
             this.addDrop(TerrariumBlocks.EBONWOOD_FENCE_GATE);
+
+            this.addDrop(TerrariumBlocks.EBONWOOD_LEAVES, (block) -> this.leavesDrops(TerrariumBlocks.EBONWOOD_LEAVES, TerrariumBlocks.EBONWOOD_SAPLING, SAPLING_DROP_CHANCE).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(this.addSurvivesExplosionCondition(TerrariumBlocks.EBONWOOD_LEAVES, ItemEntry.builder(Items.APPLE)).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, 1.0F / 200, 1.0F / 180, 1.0F / 160, 1.0F / 120, 1.0F / 40)))));
+            this.addDrop(TerrariumBlocks.EBONWOOD_SAPLING);
+            this.addPottedPlantDrops(TerrariumBlocks.POTTED_EBONWOOD_SAPLING);
         }
     }
 
@@ -63,6 +75,9 @@ public class TerrariumDataGenerator implements DataGeneratorEntrypoint {
 
             blockStateModelGenerator.registerLog(TerrariumBlocks.EBONWOOD_LOG).log(TerrariumBlocks.EBONWOOD_LOG).wood(TerrariumBlocks.EBONWOOD);
             blockStateModelGenerator.registerLog(TerrariumBlocks.STRIPPED_EBONWOOD_LOG).log(TerrariumBlocks.STRIPPED_EBONWOOD_LOG).wood(TerrariumBlocks.STRIPPED_EBONWOOD);
+
+            blockStateModelGenerator.registerSimpleCubeAll(TerrariumBlocks.EBONWOOD_LEAVES);
+            blockStateModelGenerator.registerFlowerPotPlant(TerrariumBlocks.EBONWOOD_SAPLING, TerrariumBlocks.POTTED_EBONWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         }
 
         @Override
