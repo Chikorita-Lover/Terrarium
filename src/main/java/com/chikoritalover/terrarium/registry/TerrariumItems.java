@@ -1,17 +1,21 @@
 package com.chikoritalover.terrarium.registry;
 
 import com.chikoritalover.terrarium.Terrarium;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class TerrariumItems {
+    public static final Item DEMONITE_INGOT = register("demonite_ingot", new Item(new FabricItemSettings()));
+
     private static Item register(String id, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Terrarium.MODID, id), item);
     }
@@ -37,6 +41,9 @@ public class TerrariumItems {
             entries.addBefore(Blocks.MUSHROOM_STEM, TerrariumBlocks.EBONWOOD_LOG);
             entries.addBefore(Blocks.AZALEA_LEAVES, TerrariumBlocks.EBONWOOD_LEAVES);
             entries.addBefore(Blocks.AZALEA, TerrariumBlocks.EBONWOOD_SAPLING);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.addAfter(Items.GOLD_INGOT, TerrariumItems.DEMONITE_INGOT);
         });
     }
 }

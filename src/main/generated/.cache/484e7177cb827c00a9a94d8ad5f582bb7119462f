@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-05T21:18:24.6623351	Terrarium/Model Definitions
+// 1.20.1	2024-02-06T17:31:19.8578675	Terrarium/Model Definitions
 57a22df0d70fbe3ed3b1129581562e9fa051db92 assets\terrarium\blockstates\stripped_ebonwood_log.json
 9fe66a6d2f60d857f1cc24dcbe33d63545ed18aa assets\terrarium\blockstates\ebonwood_trapdoor.json
 f02ba99df3b13ec1fd8a225c024130e08d4383e4 assets\terrarium\models\block\ebonwood_fence_gate_open.json
@@ -16,6 +16,7 @@ d2ffdea85570ed94cdc200dccbfc7e6a385596a8 assets\terrarium\blockstates\ebonwood_d
 5667cd988ae16d7dd8dc8363a1db41cdda0cad9c assets\terrarium\models\item\ebonwood_pressure_plate.json
 dd5242e29363fd0e047c02fe1c7c61d6818fc82b assets\terrarium\models\block\ebonwood_leaves.json
 c32cb5b997b92073f0591144344738542f740cac assets\terrarium\models\item\ebonwood_stairs.json
+ee7357a0f43701953a644ca687c10076576c6854 assets\terrarium\models\item\demonite_ingot.json
 435f14308fb2f87da6b889383021654b6bc464fc assets\terrarium\models\block\ebonwood_log_horizontal.json
 24c56eee106904aa13c3d0d6bba5cd47c1b60fc5 assets\terrarium\models\block\ebonwood_fence_gate_wall.json
 d5a8bddef1dc98ea3d306f589b213eb923baf4e7 assets\terrarium\models\block\ebonwood_slab_top.json
@@ -28,8 +29,8 @@ b76e987baa35a60ab068b81c43e320abf13f8787 assets\terrarium\models\item\ebonwood_l
 bfb425254c908d85b8ffef10ea8bbe6bceeb637c assets\terrarium\models\item\stripped_ebonwood.json
 73b1468e0a37edd2e03b2415aec89d0c1ac65ef6 assets\terrarium\blockstates\ebonwood_fence_gate.json
 ee1440e655c365e37e91a4303df11995fdb84701 assets\terrarium\models\block\ebonwood_fence_gate.json
-a34d2296034dc8a4f6964ac183f31f7aee6cdbc2 assets\terrarium\models\block\ebonwood_door_bottom_left.json
 609e6ad8d483d0586118e75a2b978923673b4eb6 assets\terrarium\blockstates\stripped_ebonwood.json
+a34d2296034dc8a4f6964ac183f31f7aee6cdbc2 assets\terrarium\models\block\ebonwood_door_bottom_left.json
 f3d60d15086aecb8103a87bdefb7ab1fec79955b assets\terrarium\models\block\ebonwood_planks.json
 48a80626ebc8b75e97dd0b0b6e156bee44ca5fbd assets\terrarium\blockstates\ebonwood.json
 1a70af60086d22fe92ead655591d3ecd8de503f8 assets\terrarium\models\block\ebonwood_door_top_left.json
